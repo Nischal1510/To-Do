@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#0ea5e9);
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#ffffff30;
+    border-radius:50%;
+    top:-80px;
+    left:-80px;
+    filter:blur(15px);
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    background:#ffffff20;
+    border-radius:50%;
+    bottom:-70px;
+    right:-70px;
+    filter:blur(15px);
+}
+
+.container{
+    width:400px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.2);
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    z-index:10;
+}
+
+h1{
+    color:white;
+    text-align:center;
+    margin-bottom:8px;
+    font-size:34px;
+}
+
+p{
+    color:#f5f5f5;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    color:white;
+    margin-bottom:18px;
+    font-size:15px;
+    font-weight:500;
+}
+
+input{
+    width:100%;
+    margin-top:8px;
+    padding:14px 18px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:15px;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#e5e5e5;
+}
+
+input:focus{
+    background:white;
+    color:#222;
+    transform:scale(1.02);
+}
+
+button{
+    margin-top:15px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#5b21b6;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:28px;
+    color:white;
+    text-decoration:none;
+}
+
+a span{
+    font-weight:bold;
+    color:#ffe082;
+}
+
+a:hover span{
+    text-decoration:underline;
+}

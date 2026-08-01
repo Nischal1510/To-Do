@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <h1>Hello, <%= user.name %> 👋</h1>
+
+    <form action="/task/task" method="post">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <h1>To-Do List</h1>
+
+                <div class="logo">
+                    <img src="/images/logo.png" alt="logo">
+                </div>
+
+                <button class="buttoon" type="reset">Reset</button>
+
+            </div>
+
+            <div class="input">
+
+                <input
+                    type="text"
+                    placeholder="Add your task..."
+                    id="inputBox"
+                    name="task"
+                    required
+                >
+
+                <button id="btn" type="submit">ADD</button>
+
+            </div>
+
+            <div class="list">
+
+                <ul>
+
+                    <% userTask.forEach(task=> { %>
+
+                        <li>
+                            <span><%= task.task %></span>
+                        </li>
+
+                    <% }) %>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>
